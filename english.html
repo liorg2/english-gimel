@@ -118,6 +118,11 @@
             text-align: center;
             /* Text aligned to the center */
         }
+        #reset{
+            color: green;
+            font-weight: bold;
+
+        }
     </style>
 </head>
 
@@ -130,6 +135,7 @@
         <div class="word-container" id="wordContainer"></div>
         <div class="separator"></div>
         <div class="translation-container" id="translationContainer"></div>
+        <a href="javascript:initializeGame()" id="reset" onclick="initializeGame()">עירבוב מחדש</a>
     </div>
 
     <script>
@@ -229,7 +235,7 @@
 
         function showMessage(isCorrect) {
             const messageDiv = document.getElementById('statusMessage');
-            messageDiv.textContent = isCorrect ? `${playerName}, כל הכבוד!` : `${playerName}, זה היה קרוב!`;
+            messageDiv.textContent = isCorrect ? `  כל הכבוד!` : `  זה היה קרוב!`;
             setTimeout(() => messageDiv.textContent = '', 3000);
         }
 
